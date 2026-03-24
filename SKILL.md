@@ -1,6 +1,6 @@
 ---
 name: oss-contribution-system
-description: End-to-end open-source contribution system. Discover high-value issues,
+description: End-to-end open-source GitHub contribution automation system. Discover high-value issues,
   implement fixes, open quality PRs, monitor CI/review status, and learn from each
   contribution. Triggers on "oss discover", "oss auto", "oss pr", "oss check",
   "find issues", "what should I work on", "next PR", "auto PR", "review PR",
