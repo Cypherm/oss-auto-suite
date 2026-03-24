@@ -6,7 +6,7 @@ My first two PRs on [OpenClaw](https://github.com/openclaw/openclaw) (329K+ ⭐)
 
 After the second one I thought: can this whole process be automated?
 
-Inspired by Karpathy's [autoresearch](https://github.com/andrej-karpathy/autoresearch), I built this — a set of OpenClaw skills that handle the entire open-source contribution lifecycle. It finds issues, implements fixes, opens PRs, handles bot reviews, learns from each contribution, and gets better over time
+Inspired by Karpathy's [autoresearch](https://github.com/karpathy/autoresearch), I built this — a set of OpenClaw skills that handle the entire open-source contribution lifecycle. It finds issues, implements fixes, opens PRs, handles bot reviews, learns from each contribution, and gets better over time
 
 Every feature exists because I hit a real wall doing it manually
 
