@@ -1,6 +1,16 @@
 # OSS Auto Suite
 
-An end-to-end open-source contribution system for [OpenClaw](https://openclaw.ai). Four skills work together in a learning loop — each contribution makes the next one better.
+I'm a PM, not an engineer. I don't write code for a living — I build products.
+
+But I wanted to contribute to open-source projects I use every day. So I built this system: a set of OpenClaw skills that handle the entire contribution lifecycle — from finding the right issue to getting a PR merged. I used it to land PRs on [OpenClaw](https://github.com/openclaw/openclaw) (329K+ stars), [Cal.com](https://github.com/calcom/cal.com), and other repos.
+
+Every feature in this system exists because I hit a real wall. I wasted hours on issues that were already fixed. I picked issues with 6 competing PRs. I tried to fix core infrastructure on my first contribution and got nowhere. Each failure became a rule in the system, so the next attempt was better.
+
+If you want to contribute to open source but don't know where to start, or if you're tired of rejected PRs — this is for you.
+
+Built by [@Cypherm](https://github.com/Cypherm).
+
+---
 
 ## What It Does
 
@@ -23,18 +33,22 @@ discover ──→ auto ──→ pr ──→ check ──→ retrospective
 ## Install
 
 ```bash
-# Via ClawHub
-openclaw skills install oss-auto-suite
-
-# Or manually
+# Manual install (recommended)
 git clone https://github.com/Cypherm/oss-auto-suite.git ~/.claude/skills/oss-auto-suite
+
+# Via ClawHub (coming soon)
+# openclaw skills install oss-auto-suite
 ```
 
 ## Quick Start
 
-```
+```bash
+# 0. Make sure gh CLI is authenticated
+gh auth status
+
 # 1. Find something to work on
 > oss discover https://github.com/some-org/some-repo
+# (First run auto-creates a profile and forks the repo for you)
 
 # 2. Fix an issue end-to-end
 > oss auto some-repo #12345
@@ -115,4 +129,4 @@ This system was built and refined through actual open-source contributions acros
 
 ## License
 
-MIT
+[MIT](LICENSE)
