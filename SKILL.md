@@ -2,7 +2,9 @@
 name: oss-contribution-system
 description: End-to-end open-source GitHub contribution automation system. Discover high-value issues,
   implement fixes, open quality PRs, monitor CI/review status, and learn from each
-  contribution. Triggers on "oss discover", "oss auto", "oss pr", "oss check",
+  contribution. Uses gh CLI for GitHub API access, git for version control, and
+  stores workspace-local data in ./oss-pilot-data/ for profiles and PR context.
+  Triggers on "oss discover", "oss auto", "oss pr", "oss check",
   "find issues", "what should I work on", "next PR", "auto PR", "review PR",
   "check PRs", "morning check".
 user_invocable: true
@@ -11,6 +13,7 @@ metadata:
     requires:
       bins:
         - gh
+        - git
 ---
 
 # OSS Contribution System
