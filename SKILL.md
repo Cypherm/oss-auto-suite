@@ -6,6 +6,11 @@ description: End-to-end open-source contribution system. Discover high-value iss
   "find issues", "what should I work on", "next PR", "auto PR", "review PR",
   "check PRs", "morning check".
 user_invocable: true
+metadata:
+  openclaw:
+    requires:
+      bins:
+        - gh
 ---
 
 # OSS Contribution System
