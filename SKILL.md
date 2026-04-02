@@ -97,6 +97,22 @@ Morning check-in for all pending PRs.
 - GitHub account with a fork of the target repo
 - Optional: local clone for codebase scanning (Source 8)
 
+## Security Model
+
+This skill instructs the agent to run build, lint, and test commands (e.g., `pnpm install`, `make`, `cargo test`) from the target repository. This is inherent to contribution automation --you cannot validate a fix without running the repo's toolchain.
+
+**Threat surface**: If the target repo contains malicious build scripts (e.g., postinstall hooks), those commands execute on your machine. This is the same risk as manually cloning a repo and running `npm install`.
+
+**How risk is managed**:
+- **User trust boundary**: You choose which repo to target. The skill never picks repos autonomously.
+- **Runtime gating**: OpenClaw's exec approval system prompts before executing shell commands. The skill issues instructions; the runtime decides whether to run them.
+- **Scope checkpoint**: The skill stops and asks before committing to changes >5 files or >200 lines.
+
+**Recommended hardening**:
+- Run inside a container (`openclaw --container <name>`) or VM when targeting unfamiliar repos.
+- Review the repo's `package.json` scripts / `Makefile` targets before first run.
+- Use a dedicated GitHub account for automation if you prefer isolation.
+
 ## Data Directories
 
 The system creates and manages these directories:
